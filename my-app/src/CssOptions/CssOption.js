@@ -1,8 +1,7 @@
 import React from 'react';
 
 var CssOption = props => (
-    <li className="color-option"> 
-    {/* write on click event */}
+    <li className="color-option" onClick={() => props.selectColor(props.color)}> 
         <span
             className="color-option-preview"
             style={{ backgroundColor: props.color }}

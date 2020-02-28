@@ -9,7 +9,7 @@ var PaletteColor = props => (
         <div>
             {props.color}
             <span
-                // onClick write click event
+                onClick={() => props.removeFromPalette(props.color)}
                 className="remove-from-palette"
             >
             X

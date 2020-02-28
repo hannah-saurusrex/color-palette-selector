@@ -3,7 +3,11 @@ import PaletteColor from './PaletteColor';
 
 var Palette = props => {
     var palette = props.palette.map(color => (
-        <PaletteColor />
+        <PaletteColor
+            key={color}
+            color={color}
+            removeFromPalette={props.removeFromPalette} 
+        />
     ));
     return (
         <div>
