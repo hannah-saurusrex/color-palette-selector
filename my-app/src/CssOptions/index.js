@@ -1,4 +1,6 @@
 import React from 'react';
+import CssOptionsList from './CssOptionsList';
+import SelectedCssOption from './SelectedCssOption';
 
 /*
   TODO: import and render the presentational components
@@ -9,7 +11,14 @@ import React from 'react';
 var CssOptions = props => (
     <div>
         <h2>CSS Color Options</h2>
-        <div className="color-options-row" />
+        <div className="color-options-row">
+            <CssOptionsList selectColor={props.selectColor} />
+            <SelectedCssOption 
+                palette={props.palette}
+                selectedColor={props.selectedColor}
+                addToPalette={props.addToPalette} 
+            />
+        </div>
     </div>
 );
 
