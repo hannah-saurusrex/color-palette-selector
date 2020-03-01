@@ -3,7 +3,7 @@ import CssOptions from './CssOptions';
 import Palette from './Palette';
 
 class App extends Component{
-  state = { selectedColor: "blue", palette: [] };
+  state = { selectedColor: "blue", palette: [] }; // set the existing palette color to blue
   selectColor = color => this.setState({ selectedColor: color });
   addToPalette = color => {
     if (!this.state.palette.includes(color)) {
